@@ -34,6 +34,23 @@ Route::get('gofood/{makan}/{minum}/{harga}', function($mkn,$mnm,$hrg){
         '<br>Harga Makanan sama Minumannya Rp ' .$hrg;
 });
 
+// Route Optional Parameter
+Route::get('halo/{nama?}/{kelas?}', function($nama='Nauly'){
+    return 'Haloo nama saya adalah ' .$nama;
+});
+
+// Route Optional 3 Parameter
+Route::get('pesanan/{makanan?}/{minuman?}/{harga?}', function($makan=null,$minum=null,$harga=null){
+    if (isset($makan)) {
+        echo 'Anda memesan ' .$makan;
+    } if (isset($minum)) {
+        echo ' dan ' .$minum;
+    } if (isset($harga)) {
+        echo ' dengan Harga Rp' .$harga;
+    } if ($makan == null && $minum == null && $harga == null) {
+        echo 'Anda belum memesan.';
+    }
+});
 
 // Route::get('profil', function(){
 //     return view('biodata');

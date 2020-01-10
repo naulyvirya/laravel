@@ -14,6 +14,7 @@ class PostsTableSeeder extends Seeder
         $posts = [
             ['title'=>'Tips Menikah Cepat', 'content'=>'lorem ipsum doler sit amet'],
             ['title'=>'Kenapa Harus Menikah', 'content'=>'lorem ipsum doler sit amet'],
+            ['title'=>'Haruskah Menundah Nikah?', 'content'=>'lorem ipsum doler sit amet'],
             ['title'=>'Visi Misi Berkeluarga', 'content'=>'lorem ipsum doler sit amet']
         ];
 

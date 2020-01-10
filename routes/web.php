@@ -52,6 +52,48 @@ Route::get('pesanan/{makanan?}/{minuman?}/{harga?}', function($makan=null,$minum
     }
 });
 
+Route::get('/penggajian', function(){
+    $query = App\Penggajian::all();
+    return $query;
+});
+
+// Mengakses Model
+Route::get('/testmodel', function(){
+    $query = App\Post::all();
+    return $query;
+});
+
+Route::get('/testmodel1', function(){
+    $query = App\Post::find(8);
+    return $query;
+});
+
+Route::get('/testmodel2', function(){
+    $query = App\Post::where('title','like','%Tips Menikah%')->get();
+    return $query;
+});
+
+Route::get('/testmodel3', function(){
+    $post = App\Post::find(8);
+    $post->title="Ciri Keluarga Sakinah";
+    $post->save();
+    return $post;
+});
+
+Route::get('/testmodel4', function(){
+    $post = App\Post::find(8);
+    $post->delete();
+    // cek data di database
+});
+
+Route::get('/testmodel5', function(){
+    $post = new App\Post;
+    $post->title = "7 Amalan Pembuka Jodoh";
+    $post->content = "Shalat Malam, Sedekah, Puasa Sunah, Silaturahmi, Senyum, Doa, tobat";
+    $post->save();
+    return $post;
+});
+
 // Route::get('profil', function(){
 //     return view('biodata');
 // });

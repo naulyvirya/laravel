@@ -94,6 +94,20 @@ Route::get('/testmodel5', function(){
     return $post;
 });
 
+Route::get('hello', 'SiswaController@hello');
+Route::get('nama', 'SiswaController@nama');
+Route::get('kelas', 'SiswaController@kelas');
+Route::get('alamat', 'SiswaController@alamat');
+Route::get('sekolah', 'SiswaController@sekolah');
+Route::get('hobi', 'SiswaController@hobi');
+Route::get('ttl', 'SiswaController@ttl');
+Route::get('umur', 'SiswaController@umur');
+Route::get('teman', 'SiswaController@teman_sebangku');
+Route::get('pulang', 'SiswaController@jam_pulang');
+Route::get('warnakucing/{warna?}', 'SiswaController@warnakucing');
+
+Route::get('beli/{makanan?}/{harga?}', 'SiswaController@beli');
+
 // Route::get('profil', function(){
 //     return view('biodata');
 // });

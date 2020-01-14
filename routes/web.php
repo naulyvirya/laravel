@@ -105,29 +105,37 @@ Route::get('umur', 'SiswaController@umur');
 Route::get('teman', 'SiswaController@teman_sebangku');
 Route::get('pulang', 'SiswaController@jam_pulang');
 Route::get('warnakucing/{warna?}', 'SiswaController@warnakucing');
-
 Route::get('beli/{makanan?}/{harga?}', 'SiswaController@beli');
 
-// Route::get('profil', function(){
-//     return view('biodata');
-// });
+Route::get('profil', function(){
+    return view('biodata');
+});
 
-// Route::get('profil-1', function(){
-//     return view('biodata1');
-// });
+Route::get('profil-1', function(){
+    return view('biodata1');
+});
 
-// Route::get('profil-2', function(){
-//     return view('biodata2');
-// });
+Route::get('profil-2', function(){
+    return view('biodata2');
+});
 
-// Route::get('profil-3', function(){
-//     return view('biodata3');
-// });
+Route::get('profil-3', function(){
+    return view('biodata3');
+});
 
-// Route::get('profil-4', function(){
-//     return view('biodata4');
-// });
+Route::get('profil-4', function(){
+    return view('biodata4');
+});
 
-// Route::get('profil-5', function(){
-//     return view('biodata5');
-// });
+Route::get('profil-5', function(){
+    return view('biodata5');
+});
+
+// CRUD BOOK
+Route::get('book', 'BookController@index');
+Route::get('book-create/{judul}','BookController@create');
+Route::get('book/{id}','BookController@show');
+Route::get('book-edit/{id}/{judul}','BookController@edit');
+Route::get('book-delete/{id}','BookController@delete');
+Route::get('book-select','BookController@select');
+Route::get('book-count','BookController@count');

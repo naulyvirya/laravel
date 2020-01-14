@@ -74,10 +74,12 @@ class SiswaController extends Controller
                 echo " dengan Ukuran Jumbo.";
             } elseif ($harga < 15000 && $harga >= 7500){
                 echo " dengan Ukuran Medium.";
-            } elseif ($harga < 7500) {
+            } elseif ($harga < 7500 && $harga > 1000) {
                 echo " dengan Ukuran Small.";
+            } else {
+                echo ". Tapi Maaf, anda memasukkan angka yang salah.";
             }
-        } if (!$makanan && !$harga) {
+        } if (!$makanan) {
             return "Silahkan Masukan Item Terlebih Dahulu";
         }
     }

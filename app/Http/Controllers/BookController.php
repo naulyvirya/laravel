@@ -65,7 +65,7 @@ class BookController extends Controller
     public function count()
     {
         $book = Book::count();
-        return $book;
+        return "Jumlah Data di Table ini ada " .$book;
     }
 
 }

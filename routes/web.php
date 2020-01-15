@@ -139,3 +139,15 @@ Route::get('book-edit/{id}/{judul}','BookController@edit');
 Route::get('book-delete/{id}','BookController@delete');
 Route::get('book-select','BookController@select');
 Route::get('book-count','BookController@count');
+
+// CRUD Artikel RESOURCE
+// Route::get('example', 'ExampleController@index');
+// Route::get('example/create', 'ExampleController@create');
+// Route::POST('example/{id}', 'ExampleController@store');
+// Route::get('example/{id}', 'ExampleController@show');
+// Route::get('example/{id}/edit', 'ExampleController@edit');
+// Route::PUT('example/{id}', 'ExampleController@update');
+// Route::DELETE('example/{id}', 'ExampleController@destroy');
+
+// Biar Lebih Simple
+Route::resource('example', 'ExampleController');

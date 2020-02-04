@@ -151,3 +151,9 @@ Route::get('book-count','BookController@count');
 
 // Biar Lebih Simple
 Route::resource('example', 'ExampleController');
+
+// Passing Data
+Route::get('passing','PracticeController@pass');
+Route::get('passing1','PracticeController@pass1');
+Route::get('latsol','PracticeController@latsol');
+Route::get('passing3','BarangController@index');
